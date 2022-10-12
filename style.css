@@ -27,7 +27,7 @@ body{
     background-color: #121214;
     font-size: var(--fs-body);
     font-family: var(--ff-body);
-    margin-bottom: var(--spacing);
+    padding-bottom: var(--spacing);
 }
 .page{
     width: 90%;
