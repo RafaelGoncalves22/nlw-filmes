@@ -1,0 +1,150 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+    --fs-body:1.6rem;
+    --ff-body:'Montserrat', sans-serif;
+    
+
+    --bg-line: linear-gradient(90deg, #C91842 0%, #5CC2E2 100%);
+    --img-dimensions:10rem;
+    --spacing:3.2rem;
+    --spacing-secundary:2.4rem;
+
+    --sc-mymovie:52.2rem; 
+    --fc-primary: hsl(0, 0%, 100%);
+    --fc-secundary: hsl(0, 0%, 76%);
+    --lh-text:160%;
+    --fs-title:2.4rem;
+    --fs-subtitle:1.6rem;
+}
+body{
+    background-image: url("./assets/Fundo.jpg"); 
+    background-repeat: no-repeat;
+    background-color: #121214;
+    font-size: var(--fs-body);
+    font-family: var(--ff-body);
+}
+.page{
+    width: 90%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto; 
+    margin-top:var(--spacing);
+    gap: var(--spacing);
+}
+
+/* Estilo do header */
+.page header{
+    animation: fromtop .7s .2s backwards;
+
+}
+.img-bg{
+    height: var(--img-dimensions);
+    background-image: var(--bg-line);
+    border-radius: 50%;
+}
+header img{
+    height: var(--img-dimensions);
+    border-radius: 50%;
+    padding:  0.4rem;
+}
+
+/* Estilo do main */
+main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-secundary);
+    max-width:var(--sc-mymovie);
+}
+main .my-list{
+    animation: fromBottom .7s backwards;
+    width: 100%;
+    padding-top: 0.4rem;
+    background-image: var(--bg-line);
+    border-radius: 1rem;
+}
+main .my-list:nth-child(1){
+    animation-delay: 0;
+}
+main .my-list:nth-child(2){
+    animation-delay: .3s;
+}
+main .my-list:nth-child(3){
+    animation-delay: .6s;
+}
+main .my-list:nth-child(4){
+    animation-delay: .9s;
+}
+
+.my-list > div{
+    background-color: #262629;
+    padding:var(--spacing);
+    padding-top: var(--spacing-secundary);
+    border-radius: 0.8rem;
+}
+
+div > h2{
+    font-weight: 900;
+    line-height: var(--lh-text);
+    font-size: var(--fs-title);
+    color:var(--fc-primary);
+}
+
+div > p{
+    font-weight: 400;
+    line-height: var(--lh-text);
+    font-size: var(--fs-body);
+    padding-bottom:2.4rem;
+    color:var(--fc-secundary);
+}
+
+/* Estilo dos itens da lista */
+.itens{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+}
+.itens {
+    list-style: none;
+}
+.itens li a{
+    text-decoration: none;
+}
+.itens li img{
+    height: 15rem;
+    transition-duration: 0.7s;
+    border-radius: 1.5rem;
+}
+.itens li svg{
+    transition-duration: 0.7s;
+} 
+.itens li img:hover,.itens li svg:hover{
+    transform: scale(1.1);
+}
+
+/* animaçoes*/
+@keyframes fromTop{
+    from{
+        opacity: 0;
+        transform: translatey(-35px);
+    }
+    to{
+        opacity: 1;
+        transform: translatey(0);
+    }
+}
+@keyframes fromBottom{
+    from{
+        opacity: 0;
+        transform: translatey(35px);
+    }
+    to{
+        opacity: 1;
+        transform: translatey(0);
+    }
+} 
