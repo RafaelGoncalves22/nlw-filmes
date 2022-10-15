@@ -48,6 +48,13 @@ body{
     height: var(--img-dimensions);
     background-image: var(--bg-line);
     border-radius: 50%;
+    transition: 0.7s;
+}
+.img-bg:hover{
+    transform: scale(1.1);
+}
+.img-bg a{
+    text-decoration: none;
 }
 header img{
     height: var(--img-dimensions);
